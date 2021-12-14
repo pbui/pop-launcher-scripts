@@ -2,7 +2,6 @@
 
 import json
 import os
-import re
 import sys
 
 # App
@@ -58,12 +57,7 @@ class Xrandr(object):
 
     @staticmethod
     def parse_displays():
-        displays = []
-        for line in os.popen('xrandr -q'):
-            match = re.match(Xrandr.DISPLAY_RX, line)
-            if match:
-                displays.append(match.groups()[0])
-        return displays
+        return [match.split()[0] for match in filter(lambda line: ' connected' in line, os.popen('xrandr -q'))]
 
     @staticmethod
     def set_external_display(layout):
