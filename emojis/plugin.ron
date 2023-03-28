@@ -8,5 +8,5 @@
         no_sort: true
     ),
     bin: (path: "emojis"),
-    icon: Name("emojis")
+    icon: Name("font-x-generic-symbolic")
 )
