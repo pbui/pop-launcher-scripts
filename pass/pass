@@ -29,8 +29,8 @@ class App(object):
         sys.stdout.flush()
 
     def search(self, query):
-        query        = query.split(' ', 1)[1]
-        self.matches = [password for password in self.passwords if query in password]
+        query        = query.split(' ', 1)[1].lower()
+        self.matches = [password for password in self.passwords if query in password.lower()]
 
         for index, password in enumerate(self.matches):
             sys.stdout.write(json.dumps({
