@@ -10,7 +10,7 @@ LAUNCHER_DIR = $(LIB_PATH)/pop-launcher
 SCRIPTS_DIR = $(LAUNCHER_DIR)/scripts
 PLUGIN_DIR = $(LAUNCHER_DIR)/plugins
 
-PLUGINS = display pass
+PLUGINS = display emojis pass
 
 install:
 	for plugin in $(PLUGINS); do \
