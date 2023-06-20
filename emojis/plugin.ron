@@ -2,7 +2,7 @@
     name: "Emojis",
     description: "Syntax: emoji <query>",
     query: (
-        regex: "^(emoji|emo)\\s.*",
+        regex: "^(emoji|emo|e)\\s.*",
         help: "emoji",
         isolate: true,
         no_sort: true
